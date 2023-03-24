@@ -16,6 +16,7 @@ import { DeleteOrderProductsController } from "../controllers/deleteOrderProduct
 const routes = Router();
 
 routes.route("/products").get(new GetAllProductController().handle);
+routes.route("/product/search").post(new GetOneProductController().handle);
 
 routes
   .route("/product")
@@ -26,9 +27,10 @@ routes
 
 routes.route("/orders").get(new GetAllOrderController().handle);
 
+routes.route("/order/search").post(new GetOneOrderController().handle);
+
 routes
   .route("/order")
-  .get(new GetOneOrderController().handle)
   .post(new CreateOrderController().handle)
   .put(new UpdateOrderController().handle)
   .delete(new DeleteOrderController().handle);

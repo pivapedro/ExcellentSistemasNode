@@ -22,7 +22,7 @@ export class CreateOrderController {
 
     if (result instanceof Error) return res.status(400).json(result.message);
 
-    if (result.order_id && products.length) {
+    if (result?.order_id && products?.length) {
       const productsResult = products.map(async (product) => {
         const data = await serviceProduct.execute({
           ...product,
@@ -30,6 +30,7 @@ export class CreateOrderController {
         });
         return data;
       });
+      console.log(productsResult)
     }
 
     return res.json(result);

@@ -12,7 +12,7 @@ export class DeleteProductController {
 
     const data = await product.execute(req, res);
 
-    data?.images?.map(
+    await data?.images?.map(
       async (image) => await serviceImage.execute(String(image.image_id))
     );
 

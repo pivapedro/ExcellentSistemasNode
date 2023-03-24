@@ -25,6 +25,11 @@ export class OrderProducts {
 
   @Column()
   value: number;
+  @ManyToOne(() => Product, (product) => product.name, {
+    onDelete: "CASCADE",
+  })
+  @JoinColumn({ name: "fk_product_id" })
+  name: string;
 
   @ManyToOne(() => Product, (product) => product.product_id, {
     onDelete: "CASCADE",
