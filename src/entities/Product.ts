@@ -26,7 +26,7 @@ export class Product {
   current_inventory: number;
 
   @OneToMany(() => Image, (image) => image.fk_product_id, {
-    cascade: ["remove"],
+    onDelete: "CASCADE",
   })
   @JoinColumn({ name: "product_id" })
   images: Image[];

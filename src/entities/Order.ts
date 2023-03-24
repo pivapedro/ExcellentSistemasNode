@@ -1,25 +1,23 @@
 import {
   Entity,
   Column,
-  CreateDateColumn,
   PrimaryGeneratedColumn,
+  OneToMany,
+  JoinColumn,
 } from "typeorm";
-import { v4 as uuid } from "uuid";
+import { OrdersProducts } from "./OrderProducts";
 
 @Entity("orders")
 export class Order {
   @PrimaryGeneratedColumn("increment")
-  id: number;
+  order_id: number;
 
   @Column()
-  name: string;
+  client: string;
 
-  @CreateDateColumn()
-  created_at: Date;
-
-  @CreateDateColumn()
-  updated_at: Date;
-  constructor() {
-    if (!this.id) this.id = uuid();
-  }
+  @OneToMany(() => OrdersProducts, (order) => order.order_id, {
+    cascade: ["remove"],
+  })
+  @JoinColumn({ name: "order_id" })
+  products: OrdersProducts[];
 }

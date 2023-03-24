@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import { Product } from "../entities/Product";
 import { DeleteImageService } from "../services/DeleteImageService";
 import { DeleteProductService } from "../services/DeleteProductService";
 import { GetOneProductController } from "./getOneProductController";
