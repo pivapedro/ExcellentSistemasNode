@@ -1,39 +1,21 @@
-# api-node-typescript-mysql-typeorm
+Obrigatório: Utilizar PHP sem framework, usar o padrão MVC, banco de dados MySQL e Bootstrap.
+---
+1) Tela1 - listar todos os produtos.
+2) Tela1 - terá o botão para 'Cadastro de Produto'
+3) Tela1 - na listagem dos produtos cadastrados, adicionar em cada linha de produto o botão de 'Editar' e o botão de 'Excluir'.
 
-### Tecnologias Utilizadas:
+4) Tela2 - tela de cadastro, com as seguintes informações: ID, Descrição, ValorVenda, Estoque, Imagens.
 
-- Node [Node](https://nodejs.org/en/)
-- Mysql2 [Mysql2](https://www.npmjs.com/package/mysql2)
-- Typeorm [Typeorm](https://typeorm.io/#/)
-- Express [Express](https://expressjs.com/pt-br/)
-- TypeScript [TypeScript](https://www.typescriptlang.org/)
-- UUID [UUID](https://www.npmjs.com/package/uuid)
-- Nodemon [Nodemon](https://www.npmjs.com/package/nodemon)
+5) Tela3 - tela de edição.
 
-<p>Para execução do projeto, você precisará inicialmente ter em sua máquina um dos gerenciadores de pacote abaixo: </p>
+6) Tela4 - tela exclusão de produto, obs.: pode ser uma modal ou sweetalert no lugar de uma página.
 
-- [NPM](https://www.npmjs.com/)
-- [Yarn](https://yarnpkg.com/lang/en/) (recomendado)
+7) Tela5 - IMPORTANTE - upload de imagens, após cadastrar um produto, poderá adicionar 1 ou mais fotos para o mesmo produto.
 
-<p>
+8) Tela6 - tela de pedidos, listar todos os pedidos.
+9) Tela6 - terá o botão para 'Criar pedido'
+10) Tela6 - na listagem dos pedidos, adicionar em cada linha de pedido o botão de 'Excluir'. (não precisa editar um pedido).
 
-#### 1. Clone o projeto
+11) Tela7 - tela de novo pedido, poder adicionar 1 ou mais produtos dentro do pedido. Para lançar o produto dentro do pedido, deverá escolher a quantidade e qual o produto deseja lançar.
 
-```
-git clone https://github.com/edurib17/api-node-typescript-mysql-typeorm.git
-cd api-node-typescript-mysql-typeorm
-```
-
-#### 2. Atualize as dependencias
-
-```
-yarn
-npm install
-```
-
-#### 3. Execute o projeto
-
-```
-yarn dev
-npm dev
-```
+12) Tela8 - tela exclusão de pedido, obs.: pode ser uma modal ou sweetalert no lugar de uma página.

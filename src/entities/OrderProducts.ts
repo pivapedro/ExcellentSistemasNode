@@ -10,7 +10,7 @@ import { Order } from "./Order";
 import { Product } from "./Product";
 
 @Entity("orders_product")
-export class OrdersProducts {
+export class OrderProducts {
   @PrimaryGeneratedColumn("increment")
   product_sales_id: number;
 

@@ -5,7 +5,7 @@ import {
   OneToMany,
   JoinColumn,
 } from "typeorm";
-import { OrdersProducts } from "./OrderProducts";
+import { OrderProducts } from "./OrderProducts";
 
 @Entity("orders")
 export class Order {
@@ -15,9 +15,9 @@ export class Order {
   @Column()
   client: string;
 
-  @OneToMany(() => OrdersProducts, (order) => order.order_id, {
+  @OneToMany(() => OrderProducts, (order) => order.order_id, {
     cascade: ["remove"],
   })
   @JoinColumn({ name: "order_id" })
-  products: OrdersProducts[];
+  products: OrderProducts[];
 }

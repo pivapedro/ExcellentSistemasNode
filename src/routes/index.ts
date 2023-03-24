@@ -11,6 +11,7 @@ import { UpdateOrderController } from "../controllers/updateOrderController";
 import { GetOneOrderController } from "../controllers/getOneOrderController";
 import { DeleteOrderController } from "../controllers/deleteOrderController";
 import { GetAllOrderController } from "../controllers/getAllOrderController";
+import { DeleteOrderProductsController } from "../controllers/deleteOrderProductController";
 
 const routes = Router();
 
@@ -31,5 +32,9 @@ routes
   .post(new CreateOrderController().handle)
   .put(new UpdateOrderController().handle)
   .delete(new DeleteOrderController().handle);
+
+routes
+  .route("/order/product")
+  .delete(new DeleteOrderProductsController().handle);
 
 export { routes };
